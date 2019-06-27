@@ -1,0 +1,26 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines
+# 4 space indentation
+# Tab indentation
+# New line at the end of the file
+[*]
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# Set default charset
+[*.{js,py,css,scss,html}]
+charset = utf-8
+
+# Matches the exact file `index.html`
+[index.html]
+insert_final_newline = false
+
+# Matches the style files
+[*.{css,scss}]
+insert_final_newline = false
