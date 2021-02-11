@@ -1,16 +1,97 @@
-# Frontend-Styleguide
+# Frontend coding standards
 
 I want to produce a clean, semantic, cross-browser and well supported code. All of this with the maintainability as first priority.
 
 In this document there are some best practices and standards I am following when I am coding.
 
 ## Table of Content
+- [HTML](#html)
+    - [HTML](#html)
+        - [DECLARE A DOCTYPE](#declare-a-doctype)
+        - [USE SEMANTIC HTML 5 TAGS](#use-semantic-html-5-tags)
+        - [CLOSE YOUR TAGS](#close-your-tags)
+        - [USE LOWERCASE IN YOUR TAGS](#use-lowercase-in-your-tags)
+        - [CHARACTER ENCODING](#character-encoding)
+        - [USE CONDITIONAL COMMENTS](#use-conditional-comments)
+        - [USE PRACTICAL ID AND CLASSES NAMES AND VALUES](#use-practical-id-and-classes-names-and-values)
+        - [IMAGES NEED `ALT` ATTRIBUTES](#images-need-alt-attributes)
+        - [USE TABLES FOR TABULAR DATA ONLY](#use-tables-for-tabular-data-only)
+        - [INCLUDE EXTERNAL CSS INSIDE THE `<HEAD>` TAG](#include-external-css-inside-the-head-tag)
+        - [CSS AND JAVASCRIPT INCLUDES](#css-and-javascript-includes)
+        - [KEEP THE SYNTAX ORGANIZED](#keep-the-syntax-organized)
+        - [REDUCE MARKUP](#reduce-markup)
+        - [WHITESPACING AND FORMATTING](#whitespacing-and-formatting)
+            - [INDENT TAGS THAT ARE VERY LONG](#indent-tags-that-are-very-long)
+            - [ALWAYS USE DOUBLE QUOTES IN HTML FILES](#always-use-double-quotes-in-html-files)
+            - [ATTRIBUTES ORDER](#attributes-order)
+    - [STYLES (CSS/SCSS)](#styles-cssscss)
+        - [CSS](#css)
+            - [USE A CSS RESET](#use-a-css-reset)
+            - [NEVER USE INLINE STYLES](#never-use-inline-styles)
+            - [ORGANIZE CSS WITH COMMENTS](#organize-css-with-comments)
+            - [WHITESPACING AND FORMATTING](#whitespacing-and-formatting-1)
+                - [PROPER SPACING BETWEEN PROPERTIES](#proper-spacing-between-properties)
+                - [ONE SELECTOR PER LINE](#one-selector-per-line)
+                - [BLANK LINE BETWEEN RULESETS](#blank-line-between-rulesets)
+                - [SAME LINE OPENING BRACES](#same-line-opening-braces)
+                - [SAME COLUMN CLOSING BRACES AS THE FIRST CHARACTER OF THE RULESET](#same-column-closing-braces-as-the-first-character-of-the-ruleset)
+                - [INDENTING CHILD ELEMENTS](#indenting-child-elements)
+                - [END ALL DECLARATIONS WITH A SEMICOLON](#end-all-declarations-with-a-semicolon)
+                - [USE DOUBLE QUOTES IN STYLE FILES](#use-double-quotes-in-style-files)
+                - [DOUBLE QUOTE ATTRIBUTE VALUES](#double-quote-attribute-values)
+                - [AVOID UNITS ON ZERO VALUES](#avoid-units-on-zero-values)
+                - [GROUPING VENDOR PREFIXES](#grouping-vendor-prefixes)
+                - [PROPERTIES ORDER](#properties-order)
+                    - [EXCEPTION](#exception)
+                - [LONG COMMA-SEPARATED PROPERTY VALUES](#long-comma-separated-property-values)
+            - [KEEP THE NATURAL FLOW](#keep-the-natural-flow)
+            - [INHERITANCE](#inheritance)
+            - [PIXELS vs EMs vs. REMs FOR TYPOGRAPHY](#pixels-vs-ems-vs-rems-for-typography)
+            - [USE SHORTHAND](#use-shorthand)
+            - [NEVER EVER USE `!IMPORTANT`](#never-ever-use-important)
+            - [SELECTORS](#selectors)
+                - [MINIMIZE SELECTORS TIGHTLY COUPLED TO THE DOM ELEMENTS](#minimize-selectors-tightly-coupled-to-the-dom-elements)
+                - [MINIMIZE SELECTOR ACCESSES TO THE DOM](#minimize-selector-accesses-to-the-dom)
+            - [CLASS NAMES](#class-names)
+                - [STATE CLASSES](#state-classes)
+            - [MODULARIZE STYLES FOR REUSE](#modularize-styles-for-reuse)
+            - [USE MULTIPLE STYLESHEETS, BUT BE AWARE OF THEM EXPANDING BEYOND CONTROL](#use-multiple-stylesheets-but-be-aware-of-them-expanding-beyond-control)
+            - [POSITIONING](#positioning)
+            - [COLOURS](#colours)
+            - [MEDIA QUERY PLACEMENT](#media-query-placement)
+        - [SASS SPECIFIC STANDARDS](#sass-specific-standards)
+            - [EXTENSIONS AND INCLUSIONS AT THE TOP OF THE RULESET](#extensions-and-inclusions-at-the-top-of-the-ruleset)
+            - [OPERATORS](#operators)
+- [JAVASCRIPT/TYPESCRIPT](#javascripttypescript)
+    - [JAVASCRIPT](#javascript)
+        - [CONSIDER PLACING JAVASCRIPT SCRIPTS AT THE BOTTOM](#consider-placing-javascript-scripts-at-the-bottom)
+        - [WHITESPACING AND FORMATTING](#whitespacing-and-formatting-2)
+            - [ALWAYS USE BRACES](#always-use-braces)
+            - [SAME LINE BRACES](#same-line-braces)
+            - [CHARACTER SPACING](#character-spacing)
+            - [USE 4 SPACES INDENTATION](#use-4-spaces-indentation)
+            - [ALWAYS USE SEMICOLON](#always-use-semicolon)
+            - [ALWAYS USE COMPARISON](#always-use-comparison)
+                - [EXCEPTION](#exception-1)
+            - [AVOID COMPARING TO TRUE AND FALSE](#avoid-comparing-to-true-and-false)
+        - [VARIABLES](#variables)
+            - [CAMEL CASE VARIABLES](#camel-case-variables)
+            - [BOOLEAN VARIABLES](#boolean-variables)
+        - [USE TERNARY IF STATEMENT WHENEVER POSSIBLE AND EASY TO READ](#use-ternary-if-statement-whenever-possible-and-easy-to-read)
+        - [AVOID POLLUTING THE GLOBAL NAMESPACE](#avoid-polluting-the-global-namespace)
+        - [CHECK EXISTANCE OF VARIABLES, ARRAYS AND OBJECTS](#check-existance-of-variables-arrays-and-objects)
+    - [TYPESCRIPT SPECIFIC STANDARDS](#typescript-specific-standards)
+        - [WHITESPACING AND FORMATTING](#whitespacing-and-formatting-3)
+            - [INCLUDE A SINGLE SPACE AFTER COLON AND BEFORE AND AFTER EQUAL](#include-a-single-space-after-colon-and-before-and-after-equal)
+            - [ALWAYS DEFINE STRICT TYPE WHEN DECLARING VARIABLES](#always-define-strict-type-when-declaring-variables)
+            - [INCLUDE A SINGLE SPACE BEFORE AND AFTER CURLY BRAKETS WHEN IMPORTING](#include-a-single-space-before-and-after-curly-brakets-when-importing)
+            - [USE SINGLE QUOTES IN TYPESCRIPT FILES](#use-single-quotes-in-typescript-files)
+            - [INCLUDE BLANK LINE SEPARATOR BETWEEN IMPORTS AND THE REST OF THE CODE](#include-blank-line-separator-between-imports-and-the-rest-of-the-code)
+- [GENERAL BEST PRACTICES](#general-best-practices)
+    - [CHECKING IN CROSS-BROWSER AND (POSSIBLY) CROSS-DEVICES WHILE DEVELOPING](#checking-in-cross-browser-and-possibly-cross-devices-while-developing)
+    - [COMMENTS](#comments)
 
-- HTML
-- Stiles (CSS/SCSS)
-  - SCSS specific
-- JavaScript/TypeScript
-  - TypeScript specific
+---
 
 # HTML
 
@@ -225,7 +306,9 @@ Examples:
 
 As far as Identifiable information is concerned, classes make for great reusable components, so they come first. IDs are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come after classes.
 
-## STYLES (CSS/SCSS)
+# STYLES (CSS/SCSS)
+
+## CSS
 
 ### USE A CSS RESET
 
@@ -766,6 +849,8 @@ Wrap all math operations in parentheses with a single space between values, vari
 
 # JAVASCRIPT/TYPESCRIPT
 
+## JAVASCRIPT
+
 ### CONSIDER PLACING JAVASCRIPT SCRIPTS AT THE BOTTOM
 
 When loading a script, the browser cannot continue until the entire file has been loaded. If we have JavaScript files in order to add functionality, we should place those files at the bottom, just before the closing body tag. This is a good performance practice and the results are quite noticeable.
@@ -867,7 +952,7 @@ if (blah === "foo") {
 
 The use of the `==` equality operator allows frustrating bugs to slip through almost undetected while the use of the strict equality operator `===` does not run type coercion and therefore strictly evaluates the difference between two objects.
 
-##### THE EXCEPTION
+##### EXCEPTION
 
 Double equals comparison is allowed when comparing to `null`, because it will detect both `null` or `undefined` properties. [Here a great article about this exception](https://medium.com/javascript-in-plain-english/how-to-check-for-null-in-javascript-dffab64d8ed5#:~:text=One%20way%20to%20check,the%20double%20equality%20%3D%3D%20operator%3A&text=So%2C%20when%20programming%20to%20check,for%20either%20null%20or%20undefined%20.) and [here the MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 ```TypeScript
