@@ -3,6 +3,7 @@
 ## Table of Contents
 - [Node Modules](#node-modules)
 - [HTML](../HTML/html.md#html)
+- [Styles (CSS/SCSS)](../Styles/styles.md#styles-cssscss)
 - [JavaScript/TypeScript](../Scripts/javascript.md#javascripttypescript)
 - [General best practices](../Generals/generals.md#general-best-practices)
 
