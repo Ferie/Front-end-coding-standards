@@ -1,11 +1,11 @@
 ## Table of Content
-- [Node Modules](./Node/node-modules.md#node-modules)
-- [HTML](./HTML/html.md#html)
-- [Styles (CSS/SCSS)](./Styles/styles.md#styles-cssscss)
-- [JavaScript/TypeScript](./Scripts/javascript.md#javascripttypescript)
-- [General best practices](./Generals/generals.md#general-best-practices)
-    - [Always test projects cross-browser and (possibly) cross-devices when developing](./Generals/generals.md#always-test-projects-cross-browser-and-possibly-cross-devices-when-developing)
-    - [Use comments when needed](./Generals/generals.md#Use-comments-when-needed)
+- [Node Modules](../Node/node-modules.md#node-modules)
+- [HTML](../HTML/html.md#html)
+- [Styles (CSS/SCSS)](../Styles/styles.md#styles-cssscss)
+- [JavaScript/TypeScript](../Scripts/javascript.md#javascripttypescript)
+- [General best practices](#general-best-practices)
+    - [Always test projects cross-browser and (possibly) cross-devices when developing](#always-test-projects-cross-browser-and-possibly-cross-devices-when-developing)
+    - [Use comments when needed](#Use-comments-when-needed)
 
 ---
 
