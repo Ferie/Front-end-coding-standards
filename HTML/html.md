@@ -1,6 +1,6 @@
 [Back to main page](../README.md)
 
-## Table of Content
+## Table of Contents
 - [Node Modules](../Node/node-modules.md#node-modules)
 - [HTML](#html)
     - [Validation](#validation)
