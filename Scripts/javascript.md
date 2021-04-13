@@ -1,8 +1,8 @@
 ## Table of Content
-- [Node Modules](./Node/node-modules.md#node-modules)
-- [HTML](./HTML/html.md#html)
-- [Styles (CSS/SCSS)](./Styles/styles.md#styles-cssscss)
-- [JavaScript/TypeScript](./Scripts/javascript.md#javascripttypescript)
+- [Node Modules](../Node/node-modules.md#node-modules)
+- [HTML](../HTML/html.md#html)
+- [Styles (CSS/SCSS)](../Styles/styles.md#styles-cssscss)
+- [JavaScript/TypeScript](../Scripts/javascript.md#javascripttypescript)
     - [JavaScript](#javascript)
         - [Consider placing JavaScript scripts at the bottom](#consider-placing-javascript-scripts-at-the-bottom)
         - [Whitespacing and formatting](#whitespacing-and-formatting-2)
@@ -27,7 +27,7 @@
             - [Include a single space before and after curly brakets when importing](#include-a-single-space-before-and-after-curly-brakets-when-importing)
             - [Use single quotes in typescript files](#use-single-quotes-in-typescript-files)
             - [Include blank line separator between imports and the rest of the code](#include-blank-line-separator-between-imports-and-the-rest-of-the-code)
-- [General best practices](./Generals/generals.md#general-best-practices)
+- [General best practices](../Generals/generals.md#general-best-practices)
 
 ---
 
