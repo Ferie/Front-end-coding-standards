@@ -1,3 +1,38 @@
+
+[Back to main page](../Readme.md)
+
+## Table of Content
+- [Node Modules](./Node/node-modules.md#node-modules)
+- [HTML](./HTML/html.md#html)
+    - [Validation](./HTML/html.md#validation)
+    - [Declare a Doctype](./HTML/html.md#declare-a-doctype)
+    - [Declare the language of the page](./HTML/html.md#declare-the-language-of-the-page)
+    - [Titles](./HTML/html.md#titles)
+    - [Meta Descriptions](./HTML/html.md#meta-descriptions)
+    - [Viewport](./HTML/html.md#viewport)
+    - [Use semantic HTML 5 tags](./HTML/html.md#use-semantic-html-5-tags)
+    - [Close your tags](./HTML/html.md#close-tags)
+    - [Use lowercase in your tags](./HTML/html.md#use-lowercase)
+    - [Character encoding](./HTML/html.md#character-encoding)
+    - [Use conditional comments](./HTML/html.md#use-conditional-comments)
+    - [Use practical `id` and `class` names and values](./HTML/html.md#use-practical-id-and-class-names-and-values)
+    - [Images need `alt` attributes](./HTML/html.md#images-need-alt-attributes)
+    - [Use tables for tabular data only](./HTML/html.md#use-tables-for-tabular-data-only)
+    - [Include external CSS inside the `<head>` tag](./HTML/html.md#include-external-css-inside-the-head-tag)
+    - [Including CSS and JavaScript](./HTML/html.md#including-css-and-javascript)
+    - [Keep the syntax organized](./HTML/html.md#keep-the-syntax-organized)
+    - [Reduce markup](./HTML/html.md#reduce-markup)
+    - [Whitespacing and formatting](./HTML/html.md#whitespacing-and-formatting)
+        - [Indent tags that are very long](./HTML/html.md#indent-tags-that-are-very-long)
+        - [Always use double quotes in HTML files](./HTML/html.md#always-use-double-quotes-in-html-files)
+        - [Attributes order](./HTML/html.md#attributes-order)
+- [Styles (CSS/SCSS)](./Styles/styles.md#styles-cssscss)
+- [JavaScript/TypeScript](./Scripts/javascript.md#javascripttypescript)
+- [General best practices](./Generals/generals.md#general-best-practices)
+
+---
+
+
 # HTML
 
 ### VALIDATION
