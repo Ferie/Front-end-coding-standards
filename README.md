@@ -1,68 +1,76 @@
-# Frontend coding standards
+# Frontend coding standards and best practices
 
-I want to produce a clean, semantic, cross-browser and well supported code. All of this with the maintainability as first priority.
+I want to produce a clean, semantic, cross-browser and well supported code. All of these, with maintainability as one of the first priorities.
 
-In this document there are some best practices and standards I am following when I am coding.
+In this front-end style guide there are some best practices and standards I am following when coding.
+
+_Note_: in this documents, sometimes I use "I" to refer specifically to what I use (or prefer to use), while some other times I use "We" to highlight a common best practice.
 
 ## Table of Content
-- [HTML](#html)
-    - [HTML](#html)
-        - [Declare a Doctype](#declare-a-doctype)
-        - [Use semantic HTML 5 tags](#use-semantic-html-5-tags)
-        - [Close your tags](#close-your-tags)
-        - [Use lowercase in your tags](#use-lowercase-in-your-tags)
-        - [Character encoding](#character-encoding)
-        - [Use conditional comments](#use-conditional-comments)
-        - [Use practical id and classes names and values](#use-practical-id-and-classes-names-and-values)
-        - [Images need `alt` attributes](#images-need-alt-attributes)
-        - [Use tables for tabular data only](#use-tables-for-tabular-data-only)
-        - [Include external CSS inside the `<head>` tag](#include-external-css-inside-the-head-tag)
-        - [CSS and JavaScript includes](#css-and-javascript-includes)
-        - [Keep the syntax organized](#keep-the-syntax-organized)
-        - [Reduce markup](#reduce-markup)
-        - [Whitespacing and formatting](#whitespacing-and-formatting)
-            - [Indent tags that are very long](#indent-tags-that-are-very-long)
-            - [Always use double quotes in HTML files](#always-use-double-quotes-in-html-files)
-            - [Attributes order](#attributes-order)
-    - [Styles (CSS/SCSS)](#styles-cssscss)
-        - [CSS](#css)
-            - [Use a CSS reset](#use-a-css-reset)
-            - [Never use inline styles](#never-use-inline-styles)
-            - [Organize CSS with comments](#organize-css-with-comments)
-            - [Whitespacing and formatting](#whitespacing-and-formatting-1)
-                - [Proper spacing between properties](#proper-spacing-between-properties)
-                - [One selector per line](#one-selector-per-line)
-                - [Blank line between rulesets](#blank-line-between-rulesets)
-                - [Same line opening braces](#same-line-opening-braces)
-                - [Same column closing braces as the first character of the ruleset](#same-column-closing-braces-as-the-first-character-of-the-ruleset)
-                - [Indenting child elements](#indenting-child-elements)
-                - [End all declarations with a semicolon](#end-all-declarations-with-a-semicolon)
-                - [Use double quotes in style files](#use-double-quotes-in-style-files)
-                - [Double quote attribute values](#double-quote-attribute-values)
-                - [Avoid units on zero values](#avoid-units-on-zero-values)
-                - [Grouping vendor prefixes](#grouping-vendor-prefixes)
-                - [Properties order](#properties-order)
-                    - [Exception](#exception)
-                - [Long comma separated property values](#long-comma-separated-property-values)
-            - [Keep the natural flow](#keep-the-natural-flow)
-            - [Inheritance](#inheritance)
-            - [Pixels vs `em`s vs. `rem`s for typography](#pixels-vs-ems-vs-rems-for-typography)
-            - [Use shorthand](#use-shorthand)
-            - [Never ever use `!important`](#never-ever-use-important)
-            - [Selectors](#selectors)
-                - [Minimize selectors tightly coupled to the DOM elements](#minimize-selectors-tightly-coupled-to-the-dom-elements)
-                - [Minimize selector accesses to the DOM](#minimize-selector-accesses-to-the-dom)
-            - [Class names](#class-names)
-                - [State classes](#state-classes)
-            - [Modularize styles for reuse](#modularize-styles-for-reuse)
-            - [Use multiple stylesheets, but be aware of them expanding beyond control](#use-multiple-stylesheets-but-be-aware-of-them-expanding-beyond-control)
-            - [Positioning](#positioning)
-            - [Colours](#colours)
-            - [Media query placement](#media-query-placement)
-        - [Sass specific standards](#sass-specific-standards)
-            - [Extensions and inclusions at the top of the ruleset](#extensions-and-inclusions-at-the-top-of-the-ruleset)
-            - [Operators](#operators)
-- [JavaScript/TypeScript](#javascripttypescript)
+- [Node Modules](./Node/node-modules.md#node-modules)
+- [HTML](./HTML/html.md#html)
+    - [HTML](./HTML/html.md#html)
+        - [Validation](./HTML/html.md#validation)
+        - [Declare a Doctype](./HTML/html.md#declare-a-doctype)
+        - [Declare the language of the page](./HTML/html.md#declare-the-language-of-the-page)
+        - [Titles](./HTML/html.md#titles)
+        - [Meta Descriptions](./HTML/html.md#meta-descriptions)
+        - [Viewport](./HTML/html.md#viewport)
+        - [Use semantic HTML 5 tags](./HTML/html.md#use-semantic-html-5-tags)
+        - [Close your tags](./HTML/html.md#close-tags)
+        - [Use lowercase in your tags](./HTML/html.md#use-lowercase)
+        - [Character encoding](./HTML/html.md#character-encoding)
+        - [Use conditional comments](./HTML/html.md#use-conditional-comments)
+        - [Use practical `id` and `class` names and values](./HTML/html.md#use-practical-id-and-class-names-and-values)
+        - [Images need `alt` attributes](./HTML/html.md#images-need-alt-attributes)
+        - [Use tables for tabular data only](./HTML/html.md#use-tables-for-tabular-data-only)
+        - [Include external CSS inside the `<head>` tag](./HTML/html.md#include-external-css-inside-the-head-tag)
+        - [Including CSS and JavaScript](./HTML/html.md#including-css-and-javascript)
+        - [Keep the syntax organized](./HTML/html.md#keep-the-syntax-organized)
+        - [Reduce markup](./HTML/html.md#reduce-markup)
+        - [Whitespacing and formatting](./HTML/html.md#whitespacing-and-formatting)
+            - [Indent tags that are very long](./HTML/html.md#indent-tags-that-are-very-long)
+            - [Always use double quotes in HTML files](./HTML/html.md#always-use-double-quotes-in-html-files)
+            - [Attributes order](./HTML/html.md#attributes-order)
+- [Styles (CSS/SCSS)](./Styles/styles.md#styles-cssscss)
+    - [CSS](#css)
+        - [Use a CSS reset](#use-a-css-reset)
+        - [Never use inline styles](#never-use-inline-styles)
+        - [Organize CSS with comments](#organize-css-with-comments)
+        - [Whitespacing and formatting](#whitespacing-and-formatting-1)
+            - [Proper spacing between properties](#proper-spacing-between-properties)
+            - [One selector per line](#one-selector-per-line)
+            - [Blank line between rulesets](#blank-line-between-rulesets)
+            - [Same line opening braces](#same-line-opening-braces)
+            - [Same column closing braces as the first character of the ruleset](#same-column-closing-braces-as-the-first-character-of-the-ruleset)
+            - [Indenting child elements](#indenting-child-elements)
+            - [End all declarations with a semicolon](#end-all-declarations-with-a-semicolon)
+            - [Use double quotes in style files](#use-double-quotes-in-style-files)
+            - [Double quote attribute values](#double-quote-attribute-values)
+            - [Avoid units on zero values](#avoid-units-on-zero-values)
+            - [Grouping vendor prefixes](#grouping-vendor-prefixes)
+            - [Properties order](#properties-order)
+                - [Exception](#exception)
+            - [Long comma separated property values](#long-comma-separated-property-values)
+        - [Keep the natural flow](#keep-the-natural-flow)
+        - [Inheritance](#inheritance)
+        - [Pixels vs `em`s vs. `rem`s for typography](#pixels-vs-ems-vs-rems-for-typography)
+        - [Use shorthand](#use-shorthand)
+        - [Never ever use `!important`](#never-ever-use-important)
+        - [Selectors](#selectors)
+            - [Minimize selectors tightly coupled to the DOM elements](#minimize-selectors-tightly-coupled-to-the-dom-elements)
+            - [Minimize selector accesses to the DOM](#minimize-selector-accesses-to-the-dom)
+        - [Class names](#class-names)
+            - [State classes](#state-classes)
+        - [Modularize styles for reuse](#modularize-styles-for-reuse)
+        - [Use multiple stylesheets, but be aware of them expanding beyond control](#use-multiple-stylesheets-but-be-aware-of-them-expanding-beyond-control)
+        - [Positioning](#positioning)
+        - [Colours](#colours)
+        - [Media query placement](#media-query-placement)
+    - [Sass specific standards](#sass-specific-standards)
+        - [Extensions and inclusions at the top of the ruleset](#extensions-and-inclusions-at-the-top-of-the-ruleset)
+        - [Operators](#operators)
+- [JavaScript/TypeScript](./Scripts/javascript.md#javascripttypescript)
     - [JavaScript](#javascript)
         - [Consider placing JavaScript scripts at the bottom](#consider-placing-javascript-scripts-at-the-bottom)
         - [Whitespacing and formatting](#whitespacing-and-formatting-2)
@@ -87,224 +95,13 @@ In this document there are some best practices and standards I am following when
             - [Include a single space before and after curly brakets when importing](#include-a-single-space-before-and-after-curly-brakets-when-importing)
             - [Use single quotes in typescript files](#use-single-quotes-in-typescript-files)
             - [Include blank line separator between imports and the rest of the code](#include-blank-line-separator-between-imports-and-the-rest-of-the-code)
-- [General best practices](#general-best-practices)
+- [General best practices](./Generals/generals.md#general-best-practices)
     - [Checking in cross browser and possibly cross devices while developing](#checking-in-cross-browser-and-possibly-cross-devices-while-developing)
     - [Comments](#comments)
 
 ---
 
-# HTML
 
-### DECLARE A DOCTYPE
-
-The DOCTYPE declaration should be in the first line of any HTML file. Actually, it activates the standard mode in all browser. It is recommended that you use the HTML doctype when using HTML 5:
-```HTML
-<!DOCTYPE html>
-```
-
-### USE SEMANTIC HTML 5 TAGS
-
-To improve the experience of users that are using readers and other tools to read a website, the best practice is to use the tags provided by HTML 5 so that clearly describe their meaning in a human and machine readable way.
-```HTML
-<!-- Don't do this -->
-<div id="main">
-    <div class="article">
-        <div class="header">
-            <h1>Blog post</h1>
-            <p>Published: <span>21st Feb, 2015</span></p>
-        </div>
-        <p>
-            Paragraph of this wonderful article.
-        </p>
-    </div>
-</div>
-
-<!-- Do this instead -->
-<main>
-    <article>
-        <header>
-            <h1>Blog post</h1>
-            <p>Published: <time datetime="2015-02-21">21st Feb, 2015</time></p>
-        </header>
-        <p>
-            Paragraph of this wonderful article.
-        </p>
-    </article>
-</main>
-```
-
-### CLOSE YOUR TAGS
-
-Leaving some tags open is simply a bad practice. Only self-closing tags are valid. Normal HTML tags can never have self-closing tags.
-```HTML
-<!-- Correct -->
-<br>
-<input>
-<img>
-<link>
-<meta>
-<hr>
-
-<!-- Wrong -->
-<br />
-<input />
-<img />
-<meta />
-<link />
-<hr />
-```
-
-### USE LOWERCASE IN YOUR TAGS
-
-It is a good practice to keep markup lower-case. The capitalizing markup will work and will probably not affect how your web pages are rendered, but it does affect code readability. We should keep it simple.
-
-### CHARACTER ENCODING
-
-Quickly and easily ensure proper rendering of your content by declaring an explicit character encoding. When doing so, you may avoid using character entities in your HTML, provided their encoding matches that of the document (generally UTF-8).
-```HTML
-<meta charset="utf-8">
-```
-
-### USE CONDITIONAL COMMENTS
-
-Sometimes some clients want to target specific versions of *Internet Explorer*, other than using well known IE hacks, we can use the conditional comment like the one shown below to target IE9 and lower versions.
-```HTML
-<link href="style.css" rel="stylesheet">
-<!--[if lte IE 9]>
-    <link href="ie.css" rel="stylesheet" type="text/css">
-<![endif]-->
-```
-
-### USE PRACTICAL ID AND CLASSES NAMES AND VALUES
-
-We should only give elements an `id` attribute if they are unique. Classes can be applied to multiple elements that share the same style properties. It is always preferable to name something `id` or `class`, by the nature of what it is rather than by what it looks like. Ids and class names should be all lowercase.
-
-### IMAGES NEED `ALT` ATTRIBUTES
-
-The `<img>` tag requires alt text to both validate and meet accessibility guidelines. The text in the `alt` attribute should be descriptive of what the image shows, or is trying to achieve, unless of course the image is not critical.
-
-If an image is purely decorative (it provides no content value other than visual flair to the page) then a `background-image` is appropriate. 
-
-### USE TABLES FOR TABULAR DATA ONLY
-
-Tables should only ever be used for the presentation of tabular data. The only exception is when composing HTML email, in which a table is almost the only thing supported by soul crushing email clients.
-
-### INCLUDE EXTERNAL CSS INSIDE THE `<HEAD>` TAG
-
-Style sheets can be placed anywhere but the HTML specification recommends that they be placed within the document `<head>` tag. The primary benefit is that pages will load faster.
-
-### CSS AND JAVASCRIPT INCLUDES
-
-Per HTML5 spec, typically there is no need to specify a `type` when including CSS and JavaScript files as `text/css` and `text/javascript` are their respective defaults.
-```HTML
-<!-- External CSS -->
-<link href="styles.css" rel="stylesheet">
-
-<!-- In-document CSS -->
-<style>
-  /* ... */
-</style>
-
-<!-- JavaScript -->
-<script src="app.js"></script>
-```
-
-### KEEP THE SYNTAX ORGANIZED
-
-When pages will grow, managing HTML can be hard. There are some quick rules that can help us to keep our syntax clean and organized. These include the following:
-
-- Indent nested elements.
-- Use double quotes, not single or completely omitted quotes.
-- Omit the values on Boolean attributes.
-- Use blank lines to space between blocks of related elements.
-```HTML
-<form action="/action_page.php" method="get">
-    <fieldset>
-        <label>Select an option</label>
-        <select>
-            <option value="1" selected>Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-        </select>
-    
-        <label>Default choice</label>
-        <input type="checkbox" value="1" checked>
-    
-        <button type="submit" disabled>Submit</button>
-    </fieldset>
-</form>
-```
-
-### REDUCE MARKUP
-
-Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML.
-```HTML
-<!-- Don't do this -->
-<span class="avatar">
-  <img src="images/dog.jpg">
-</span>
-
-<!-- Do this instead -->
-<img src="images/dog.jpg" class="avatar">
-```
-
-### WHITESPACING AND FORMATTING
-
-#### INDENT TAGS THAT ARE VERY LONG
-
-For the sake or readability
-```HTML
-<!-- Don't do this -->
-<input type="text" placeholder="Enter input" name="inputName"
-    id="input-id" class="input-class" data-attribute="attribute-1"
-    data-attribute-option="attribute-option">
-
-<!-- Do this instead -->
-<input
-    type="text"
-    name="inputName"
-    class="input-class"
-    id="input-id"
-    placeholder="Enter input"
-    aria-label="Enter input"
-    data-attribute="attribute-1"
-    data-attribute-option="attribute-option"
->
-```
-
-#### ALWAYS USE DOUBLE QUOTES IN HTML FILES
-```HTML
-<!-- Don't do this -->
-<input type='text' name='inputName' class='input-class'>
-
-<!-- Do this instead -->
-<input type="text" name="inputName" class="input-class">
-```
-
-#### ATTRIBUTES ORDER
-
-HTML attributes should come in this particular order for easier reading the code:
-- `src`, `for`, `type`, `href`, `rel`
-- `name`
-- `class`
-- `id`
-- `placeholder`
-- `title`, `alt`, `value`
-- `role`, `aria-*`
-- `data-*`
-
-Examples:
-```HTML
-<a href="/home" class="link" data-toggle="modal">
-    Home page
-</a>
-
-<input type="text" name="username" class="form-control">
-
-<img src="images/dog.jpg" class="image" alt="My dog running in the garden">
-```
-
-As far as Identifiable information is concerned, classes make for great reusable components, so they come first. IDs are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come after classes.
 
 # STYLES (CSS/SCSS)
 
