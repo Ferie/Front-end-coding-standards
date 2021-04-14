@@ -82,7 +82,7 @@ _Note_: in this documents, sometimes I use "I" to refer specifically to what I u
 - [JavaScript/TypeScript](./Scripts/javascript.md#javascripttypescript)
     - [JavaScript](./Scripts/javascript.md#javascript)
         - [Consider placing JavaScript scripts at the bottom](./Scripts/javascript.md#consider-placing-javascript-scripts-at-the-bottom)
-        - [Whitespacing and formatting](./Scripts/javascript.md#whitespacing-and-formatting-2)
+        - [Whitespacing and formatting](./Scripts/javascript.md#whitespacing-and-formatting)
             - [Always use braces](./Scripts/javascript.md#always-use-braces)
             - [Same line braces](./Scripts/javascript.md#same-line-braces)
             - [Character spacing](./Scripts/javascript.md#character-spacing)
