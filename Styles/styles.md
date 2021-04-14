@@ -53,7 +53,9 @@
 - [JavaScript/TypeScript](../Scripts/javascript.md#javascripttypescript)
 - [General best practices](../Generals/generals.md#general-best-practices)
 
+
 ---
+
 
 
 # STYLES (CSS/SCSS)
@@ -65,13 +67,19 @@
 - CSS reset _removes all built-in browser styling to all elements_ so that they have no particular style and you can define your own.
 - Normalize CSS aims to make _built-in browser styling consistent_ across browsers.
 
+
+
 ### NEVER USE INLINE STYLES
 
 When creating the markup, do not use inline styling because it would be very hard to override these styles in case you need to.
 
+
+
 ### MODULARIZE STYLES FOR REUSE
 
 CSS is built to allow styles to be reused, specifically with the use of classes. For this reason, styles assigned to a class should be modular and available to share across elements as necessary.
+
+
 
 ### CLASS NAMES
 
@@ -84,32 +92,44 @@ CSS is built to allow styles to be reused, specifically with the use of classes.
 
 It is also useful to apply many of those rules when defining _Sass_/_Less_ variable names.
 
+
+
 #### STATE CLASSES
 
 Use the `.is-*` prefix for state classes that are shared between CSS/SCSS and JavaScript to denote a temporary styling application.
 
 Example:
+
 ```HTML
 <div class="accordion-tab is-active" data-accordion="true">
     ...
 </div>
 ```
 
+
+
 ### USE MULTIPLE STYLESHEETS, BUT BE AWARE OF THEM EXPANDING BEYOND CONTROL
 
 Depending on the complexity of the design and the size of the site, sometimes it’s easier to make smaller, multiple stylesheets instead of a giant one.
+
+
 
 ### ORGANIZE CSS WITH COMMENTS
 
 Let's keep our styles organized in logical groups and provide a comment noting what the following styles pertain to. [Learn more about comments in the General section of this guide](../Generals/generals.md#use-comments-when-needed).
 
+
+
 ### NEVER USE LARGE FIXED WIDTH ELEMENTS
 
 Adjust the content to fit within the width of the viewport. For example, if an image is displayed at a width wider than the viewport it can cause the viewport to scroll horizontally: use instead `width: 100%` that keeps the image at the maximum size of the parent.
 
+
+
 ### NEVER LET CONTENT RELY ON A PARTICULAR VIEWPORT WIDTH
 
 Since screen dimensions and width in CSS pixels vary widely between devices, **content should not rely on a particular viewport** width to render well. For example:
+
 ```CSS
 /* Don't do this */
 body {
@@ -125,6 +145,7 @@ body {
 This means also that we should not rely on the element's fixed sizes to stack other elements alongside the first one: whenever possible use percentages for widths and heights or use Flexbox.
 
 
+
 ### WHITESPACING AND FORMATTING
 
 #### PROPER SPACING BETWEEN PROPERTIES
@@ -133,6 +154,7 @@ This means also that we should not rely on the element's fixed sizes to stack ot
 - Include a single space after the colon and semicolon of a property.
 - Include a single space after each comma in comma-separated property or function values.
 - Prefer one property per line (_in this case, no space after the semicolon_).
+
 ```SCSS
 /* Don't do this */
 .selector{display:none;background:rgba(2,0,36,.5);color:#000} 
@@ -147,6 +169,8 @@ This means also that we should not rely on the element's fixed sizes to stack ot
     color: #000;
 }
 ```
+
+
 
 #### ONE SELECTOR PER LINE
 
@@ -167,6 +191,8 @@ This means also that we should not rely on the element's fixed sizes to stack ot
     color: #000;
 }
 ```
+
+
 
 #### BLANK LINE BETWEEN RULESETS
 
@@ -225,6 +251,8 @@ This means also that we should not rely on the element's fixed sizes to stack ot
 }
 ```
 
+
+
 #### SAME LINE OPENING BRACES
 
 ```SCSS
@@ -244,6 +272,8 @@ This means also that we should not rely on the element's fixed sizes to stack ot
 }
 ```
 
+
+
 #### SAME COLUMN CLOSING BRACES AS THE FIRST CHARACTER OF THE RULESET
 
 ```SCSS
@@ -261,9 +291,12 @@ This means also that we should not rely on the element's fixed sizes to stack ot
 }
 ```
 
+
+
 #### INDENTING CHILD ELEMENTS
 
 Use 4 spaces on each indentation.
+
 ```SCSS
 .selector {
     display: none;
@@ -280,9 +313,12 @@ Use 4 spaces on each indentation.
 }
 ```
 
+
+
 #### END ALL DECLARATIONS WITH A SEMICOLON
 
 The last declarations semicolon is optional, but your code is more error prone without it.
+
 ```SCSS
 /* Don't do this */
 .selector {
@@ -294,6 +330,8 @@ The last declarations semicolon is optional, but your code is more error prone w
     color: red;
 }
 ```
+
+
 
 #### USE DOUBLE QUOTES IN STYLE FILES
 
@@ -308,6 +346,8 @@ The last declarations semicolon is optional, but your code is more error prone w
     content: "";
 }
 ```
+
+
 
 #### DOUBLE QUOTE ATTRIBUTE VALUES
 
@@ -325,9 +365,12 @@ input[type="checkbox"] {
 
 [Further reading about the reason behind this choice](https://mathiasbynens.be/notes/unquoted-attribute-values#css).
 
+
+
 #### AVOID UNITS ON ZERO VALUES
 
 One way to easily cut down on the amount of CSS we write is to remove the unit from any zero value: a zero will always be a zero.
+
 ```SCSS
 /* Don't do this */
 .selector { 
@@ -342,6 +385,8 @@ One way to easily cut down on the amount of CSS we write is to remove the unit f
 }
 ```
 
+
+
 #### GROUPING VENDOR PREFIXES
 
 _DO NOT use all the major prefixes on every single CSS3 property_.
@@ -349,6 +394,7 @@ _DO NOT use all the major prefixes on every single CSS3 property_.
 It appears that many generic mixins are just putting everything with the prefixes: something like `-o-border-radius` has never existed and never needs to go into your CSS. Consult [CanIUse](https://caniuse.com/) if you have doubts about a property.
 
 If you have to use them, insert them before the standard property.
+
 ```SCSS
 .selector { 
     -webkit-transition: all 4s ease; /* Android, Chrome, iOS */
@@ -359,6 +405,8 @@ If you have to use them, insert them before the standard property.
 }
 ```
 
+
+
 #### PROPERTIES ORDER
 
 For the sake of readability, I structure all the properties in alphabetical order with the exception of the ones that are ruling the position of the element (`float`, `position`, `top`, `left`, `right`, `bottom`) and the visibility (`display`) at the top of the declaration.
@@ -366,6 +414,7 @@ For the sake of readability, I structure all the properties in alphabetical orde
 I also put the ones that are ruling the dimensions (`max-height`, `max-width`, `height` and `width`) at the bottom where `width` rule should be (considering alphabetical order).
 
 Example:
+
 ```SCSS
 .selector { 
     position: absolute;
@@ -389,9 +438,11 @@ Example:
 
 Positioning rules come first because they can remove an element from the normal flow of the document and override box model related styles.
 
+
 ##### EXCEPTION
 
 All extensions and inclusions that are coming from Sass features, should be placed at the top of the declarations, even before the positioning properties, like in the following example:
+
 ```SCSS
 .selector { 
     @extend .extendedClass;
@@ -407,9 +458,12 @@ All extensions and inclusions that are coming from Sass features, should be plac
 
 [More on this further below](#extensions-and-inclusions-at-the-top-of-the-ruleset).
 
+
+
 #### LONG COMMA-SEPARATED PROPERTY VALUES
 
 Those properties (such as collections of gradients or shadows) can be arranged across multiple lines in an effort to improve readability and produce more useful diffs (when checked in).
+
 ```SCSS
 .selector {
     background-image: linear-gradient(#fff, #ccc),
@@ -419,11 +473,14 @@ Those properties (such as collections of gradients or shadows) can be arranged a
 }
 ```
 
+
+
 ### KEEP THE NATURAL FLOW
 
 Do not change the default behaviour of an element whenever possible.
 
 Keep elements in the natural document flow as much as possible.
+
 ```SCSS
 /* Don't do this */
 div {
@@ -438,6 +495,7 @@ div {
 ```
 
 Similarly, do not bring an element off the flow if you can avoid it.
+
 ```SCSS
 /* Don't do this */
 .selector {
@@ -453,6 +511,8 @@ Similarly, do not bring an element off the flow if you can avoid it.
 }
 ```
 
+
+
 ### TYPOGRAPHY
 
 #### FONT SIZE
@@ -464,6 +524,7 @@ We can control _font-size proportion_ with relative sizing units `rem` or `
 If you need to, use a percentage unit on the `:root` or `html` selector's `font-size` property.
 
 For example, in case of `20px` default project's font size, use:
+
 ```CSS
 html {
     font-size: 125%; // (125/100) * 16px = 20px
@@ -472,11 +533,14 @@ html {
 
 the project's root font size would then be `20px`, therefore, `1.5rem` would be `30px`.
 
+
+
 #### PIXELS vs EMs vs. REMs FOR TYPOGRAPHY
 
 Use `rem`s or `em`s over `px`s for font sizes: as recommended in the previous point, these units are scalable and therefore, they offer users the control over the size of the text. [More about this here](https://www.24a11y.com/2019/pixels-vs-relative-units-in-css-why-its-still-a-big-deal/).
 
 Additionally, a unitless `line-height` is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the `font-size`.
+
 ```SCSS
 /* Don't do this */
 .selector { 
@@ -493,9 +557,12 @@ Additionally, a unitless `line-height` is preferred because it does not inheri
 
 Read more about when and how we should use `em`s or `rem`s [here](https://zellwk.com/blog/rem-vs-em/).
 
+
+
 #### FONT ADJUSTMENT
 
 To help prevent adjustments of font sizes after iOS device orientation changes, use `text-size-adjust: 100%` in the `body` tag so it will be inherited by its children.
+
 ```CSS
 body {
     -webkit-text-size-adjust: 100%;
@@ -507,9 +574,12 @@ body {
 
 Notice that modern Safari versions are no more using the `user-scalable` trick in the meta tag `viewport`, while in older versions this is still effective. [Read more about this in this StackOverflow question](https://stackoverflow.com/questions/2710764/preserve-html-font-size-when-iphone-orientation-changes-from-portrait-to-landsca)
 
+
+
 ### INHERITANCE
 
 Don't duplicate style declarations that can be inherited.
+
 ```SCSS
 /* Don't do this */
 .parent-selector {
@@ -528,9 +598,12 @@ Don't duplicate style declarations that can be inherited.
 
 More on [CSS Inheritance on MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) and in [this StackOverflow answer](https://stackoverflow.com/a/5612360/2275011) that has a complete list of properties that can be inherited.
 
+
+
 ### USE SHORTHAND
 
 One feature of CSS is the ability to use shorthand properties and values. Using that allows us to quickly set and identify styles (`margin`, `padding`, `border`, `animation`, `flex`, etc).
+
 ```SCSS
 /* Don't do this */
 .selector {
@@ -552,6 +625,7 @@ One feature of CSS is the ability to use shorthand properties and values. Using 
 ```
 
 On the contrary, when we are only setting just one value, shorthand alternatives should not be used because it will be hard to identify immediately which CSS attribute is being applied.
+
 ```SCSS
 /* Don't do this */
 .selector {
@@ -570,6 +644,7 @@ On the contrary, when we are only setting just one value, shorthand alternatives
 
 More on shorthand properties on the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties).
 
+
 #### EXCEPTIONS
 
 There are few exceptions to that standard: those are particularly related to the `font` and `background` properties.
@@ -579,6 +654,7 @@ In both these cases, it is not always easy to read the shorthand rule and/or und
 Furthermore, the shorthanded property could become quite long losing readability and breaking the IDE's 80 columns rule.
 
 In those cases, I prefer to use the complete and full property.
+
 ```CSS
 /* Don't do this */
 .selector {
@@ -612,6 +688,8 @@ In those cases, I prefer to use the complete and full property.
 }
 ```
 
+
+
 ### NEVER EVER USE `!IMPORTANT`
 
 **Never ever use `!important`**. That’s it!
@@ -622,11 +700,14 @@ Avoiding the use of this attribute is the first step to keep a pretty good level
 
 Side note: the _only rare case_ when there is the necessity to override a third party stylesheet, which we do not have access or permission to edit, _is the only exception_ where this property can be admitted.
 
+
+
 ### SELECTORS
 
 #### MINIMIZE SELECTORS TIGHTLY COUPLED TO THE DOM ELEMENTS
 
 Consider adding a class to the HTML elements you want to match, especially when your selector exceeds 3 structural pseudo-classes, descendant or sibling combinators.
+
 ```SCSS
 /* Don't do this */
 div p a {
@@ -641,9 +722,12 @@ div p a {
 }
 ```
 
+
+
 #### MINIMIZE SELECTOR ACCESSES TO THE DOM
 
 Consider using structural pseudo-classes, descendant or sibling combinators when you realize there are multiple accesses to the DOM when writing a CSS rule.
+
 ```SCSS
 /* Don't do this */
 .article .paragraph .paragraph__link { /* 3 accesses to the DOM to find the elements */
@@ -658,15 +742,21 @@ Consider using structural pseudo-classes, descendant or sibling combinators when
 }
 ```
 
+
+
 ### POSITIONING
 
 - `float` rules are great for pulling elements out of the DOM and forcing them hard up against a left or a right edge.
 - The `position` rule is always relative to the nearest positioned parent element. `position: absolute;` pulls elements out of their normal flow. To position absolutely an element relatively to the parent, the parent element needs to be styled `position: relative;` so all child elements will draw from the top, right, bottom and left of this parent container.
 
+
+
 ### COLOURS
 
 - Lowercase all hex values, for example `#fff`. Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.
 - Use shorthand hex values where available, for example `#fff` instead of `#ffffff`.
+
+
 
 ### MEDIA QUERIES
 
@@ -674,13 +764,19 @@ Consider using structural pseudo-classes, descendant or sibling combinators when
 
 Use CSS media queries to apply different styling for small and large screens.
 
+
+
 #### APPROACH
 
 Use [mobile-first approach](https://www.freecodecamp.org/news/taking-the-right-approach-to-responsive-web-design/).
 
+
+
 #### PLACING MEDIA QUERIES
 
 Place media queries as close to their relevant rulesets, whenever possible. Do not bundle them all in a separate stylesheet or at the end of the file. Doing so only makes it easier for developers to miss them in the future.
+
+
 
 ## SASS/SCSS SPECIFIC STANDARDS
 
@@ -690,6 +786,7 @@ All extensions and inclusions should be placed at the top of the declarations be
 
 - Always place `@extend` statements on the first lines of a declaration block.
 - Where possible, group `@include` statements at the top of a declaration block, after any `@extend` statements.
+
 ```SCSS
 .selector { 
     @extend .extendedClass;
@@ -705,9 +802,12 @@ All extensions and inclusions should be placed at the top of the declarations be
 }
 ```
 
+
+
 ### OPERATORS
 
 Wrap all math operations in parentheses with a single space between values, variables, and operators.
+
 ```SCSS
 /* Don't do this */
 .selector {
