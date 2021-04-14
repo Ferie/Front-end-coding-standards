@@ -98,7 +98,7 @@ _Note_: in this documents, sometimes I use "I" to refer specifically to what I u
         - [Avoid polluting the global namespace](./Scripts/javascript.md#avoid-polluting-the-global-namespace)
         - [Check existance of variables, arrays and objects](./Scripts/javascript.md#check-existance-of-variables-arrays-and-objects)
     - [TypeScript specific standards](./Scripts/javascript.md#typescript-specific-standards)
-        - [Whitespacing and formatting](./Scripts/javascript.md#whitespacing-and-formatting-3)
+        - [Whitespacing and formatting](./Scripts/javascript.md#whitespacing-and-formatting-1)
             - [Include a single space after colon and before and after equal](./Scripts/javascript.md#include-a-single-space-after-colon-and-before-and-after-equal)
             - [Always define strict type when declaring variables](./Scripts/javascript.md#always-define-strict-type-when-declaring-variables)
             - [Include a single space before and after curly brakets when importing](./Scripts/javascript.md#include-a-single-space-before-and-after-curly-brakets-when-importing)
