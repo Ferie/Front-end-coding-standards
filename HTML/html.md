@@ -1,3 +1,37 @@
+[Back to main page](../README.md#frontend-coding-standards-and-best-practices)
+
+## Table of Contents
+- [Node Modules](../Node/node-modules.md#node-modules)
+- [HTML](#html)
+    - [Validation](#validation)
+    - [Declare a Doctype](#declare-a-doctype)
+    - [Declare the language of the page](#declare-the-language-of-the-page)
+    - [Titles](#titles)
+    - [Meta Descriptions](#meta-descriptions)
+    - [Viewport](#viewport)
+    - [Use semantic HTML 5 tags](#use-semantic-html-5-tags)
+    - [Close your tags](#close-tags)
+    - [Use lowercase in your tags](#use-lowercase)
+    - [Character encoding](#character-encoding)
+    - [Use conditional comments](#use-conditional-comments)
+    - [Use practical `id` and `class` names and values](#use-practical-id-and-class-names-and-values)
+    - [Images need `alt` attributes](#images-need-alt-attributes)
+    - [Use tables for tabular data only](#use-tables-for-tabular-data-only)
+    - [Include external CSS inside the `<head>` tag](#include-external-css-inside-the-head-tag)
+    - [Including CSS and JavaScript](#including-css-and-javascript)
+    - [Keep the syntax organized](#keep-the-syntax-organized)
+    - [Reduce markup](#reduce-markup)
+    - [Whitespacing and formatting](#whitespacing-and-formatting)
+        - [Indent tags that are very long](#indent-tags-that-are-very-long)
+        - [Always use double quotes in HTML files](#always-use-double-quotes-in-html-files)
+        - [Attributes order](#attributes-order)
+- [Styles (CSS/SCSS)](../Styles/styles.md#styles-cssscss)
+- [JavaScript/TypeScript](../Scripts/javascript.md#javascripttypescript)
+- [General best practices](../Generals/generals.md#general-best-practices)
+
+---
+
+
 # HTML
 
 ### VALIDATION
