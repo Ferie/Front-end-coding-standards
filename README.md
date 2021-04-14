@@ -6,7 +6,7 @@ In this front-end style guide there are some best practices and standards I am f
 
 _Note_: in this documents, sometimes I use "I" to refer specifically to what I use (or prefer to use), while some other times I use "We" to highlight a common best practice.
 
-## Table of Content
+## Table of Contents
 - [Node Modules](./Node/node-modules.md#node-modules)
 - [HTML](./HTML/html.md#html)
     - [HTML](./HTML/html.md#html)
