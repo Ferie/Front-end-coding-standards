@@ -1,6 +1,6 @@
 [Back to main page](../README.md#frontend-coding-standards-and-best-practices)
 
-## Table of Content
+## Table of Contents
 - [Node Modules](../Node/node-modules.md#node-modules)
 - [HTML](../HTML/html.md#html)
 - [Styles (CSS/SCSS)](#styles-cssscss)
