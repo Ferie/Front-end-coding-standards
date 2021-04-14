@@ -47,7 +47,7 @@
             - [Responsive layouts](#responsive-layouts)
             - [Approach](#approach)
             - [Placing Media Queries](#placing-media-queries)
-    - [Sass specific standards](#sass-specific-standards)
+    - [Sass/SCSS specific standards](#sassscss-specific-standards)
         - [Extensions and inclusions at the top of the ruleset](#extensions-and-inclusions-at-the-top-of-the-ruleset)
         - [Operators](#operators)
 - [JavaScript/TypeScript](../Scripts/javascript.md#javascripttypescript)
@@ -682,7 +682,7 @@ Use [mobile-first approach](https://www.freecodecamp.org/news/taking-the-right-a
 
 Place media queries as close to their relevant rulesets, whenever possible. Do not bundle them all in a separate stylesheet or at the end of the file. Doing so only makes it easier for developers to miss them in the future.
 
-## SASS SPECIFIC STANDARDS
+## SASS/SCSS SPECIFIC STANDARDS
 
 ### EXTENSIONS AND INCLUSIONS AT THE TOP OF THE RULESET
 
