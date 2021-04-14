@@ -9,13 +9,18 @@
     - [Always test projects cross-browser and (possibly) cross-devices when developing](#always-test-projects-cross-browser-and-possibly-cross-devices-when-developing)
     - [Use comments when needed](#Use-comments-when-needed)
 
+
 ---
+
+
 
 # GENERAL BEST PRACTICES
 
 ### ALWAYS TEST PROJECTS CROSS-BROWSER AND (POSSIBLY) CROSS-DEVICES WHEN DEVELOPING
 
 Cross-browser issues are a major problem for front-end developers, especially due to *Internet Explorer* and *Safari*. It is a good practice to test our code against all the browsers supported once the development is finished and (possibly) test it with different devices. In this last case, the Chrome browser is helpful in testing different mobile renderings and engines.
+
+
 
 ### USE COMMENTS WHEN NEEDED
 

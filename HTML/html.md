@@ -29,7 +29,9 @@
 - [JavaScript/TypeScript](../Scripts/javascript.md#javascripttypescript)
 - [General best practices](../Generals/generals.md#general-best-practices)
 
+
 ---
+
 
 
 # HTML
@@ -41,28 +43,39 @@ A concerted effort should be made to ensure that all HTML and CSS validate. Mark
 - [W3C HTML Markup Validator](http://validator.w3.org/)
 - [W3C CSS Validator](http://jigsaw.w3.org/css-validator)
 
+
+
 ### DECLARE A DOCTYPE
 
 The DOCTYPE declaration should be in the first line of any HTML file. Actually, it activates the standard mode in all browser. It is recommended that you use the HTML doctype when using HTML 5:
+
 ```HTML
 <!DOCTYPE html>
 ```
 
+
+
 ### DECLARE THE LANGUAGE OF THE PAGE
 
 Always add a `lang` attribute to the `html` tag to set the default language of your page.
+
 ```HTML
 <html lang="en">
 ```
 
 Browsers and other applications can use information about the language of content to deliver to users the most appropriate information, or to present information to users in the most appropriate way. The more content is tagged and tagged correctly, the more useful and pervasive such applications will become.
 
+
+
 ### TITLES
 
 Titles should contain descriptive information that concisely describes the current page. In case of nested pages, information in the title tag should be ordered from most specific to least specific. A standard delimiter such as `–` or `|` should be employed to indicate distinct content levels, for example:
+
 ```HTML
 <title>About us - Our mission and values | The Most Wonderful Company</title>
 ```
+
+
 
 ### META DESCRIPTIONS
 
@@ -72,9 +85,12 @@ _**Do not duplicate meta descriptions from other pages.**_
 
 Customised meta descriptions can appear in search engine result pages. For example, _Google_ will sometimes replace custom meta descriptions with on-page content if they feel it is of more value to the end user. If no meta description exists, it usually create its own from on-page content. [More about titles and meta tags on _Google Developers_](https://developers.google.com/search/docs/advanced/appearance/good-titles-snippets).
 
+
+
 ### VIEWPORT
 
 The viewport is the user's visible area of a web page. The viewport varies with the device, for this reason, it is smaller on a mobile phone than on a computer screen. HTML5 introduced a method to let web designers take control over the viewport, through the `<meta>` tag. We should include the `meta` tag `viewport` in all our web pages:
+
 ```HTML
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 ```
@@ -83,9 +99,12 @@ The viewport is the user's visible area of a web page. The viewport varies with 
 - `initial-scale=1` sets the initial zoom level when the page is first loaded by the browser and ensures smartphones retain the same zoom level during orientation change (from portrait to landscape and viceversa).
 - `viewport-fit=cover` ensures that smartphones that use "[safe areas](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/adaptivity-and-layout/)" are able to [adapt the content accordingly](https://stackoverflow.com/questions/56243315/handle-the-safe-area-in-chrome-browser-on-the-iphone-x-family).
 
+
+
 ### USE SEMANTIC HTML 5 TAGS
 
 To improve the experience of users that are using readers and other tools to read a website, the best practice is to use the tags provided by HTML 5 so that clearly describe their meaning in a human and machine readable way.
+
 ```HTML
 <!-- Don't do this -->
 <div id="main">
@@ -114,11 +133,14 @@ To improve the experience of users that are using readers and other tools to rea
 </main>
 ```
 
+
+
 ### CLOSE TAGS
 
 Leaving some tags open is simply a bad practice.
 
 **Only self-closing tags are valid**. In HTML 5, normal HTML tags can never have self-closing tags.
+
 ```HTML
 <!-- Don't do this - Wrong but accepted in HTML 5 -->
 <br />
@@ -137,28 +159,38 @@ Leaving some tags open is simply a bad practice.
 <hr>
 ```
 
+
+
 ### USE LOWERCASE
 
 It is a good practice to keep markup lower-case. The capitalizing markup will work and will probably not affect how your web pages are rendered, but it does affect code readability.
 
 We should keep it simple.
 
+
+
 ### CHARACTER ENCODING
 
 Quickly and easily ensure proper rendering of your content by declaring an explicit character encoding. When doing so, you may avoid using character entities in your HTML, provided their encoding matches that of the document (generally UTF-8).
+
 ```HTML
 <meta charset="utf-8">
 ```
 
+
+
 ### USE CONDITIONAL COMMENTS
 
 Sometimes some clients want to target specific versions of *Internet Explorer*, other than using well known IE hacks, we can use the conditional comment like the one shown below to target IE9 and lower versions.
+
 ```HTML
 <link href="style.css" rel="stylesheet">
 <!--[if lte IE 9]>
     <link href="ie.css" rel="stylesheet" type="text/css">
 <![endif]-->
 ```
+
+
 
 ### USE PRACTICAL `id` AND `class` NAMES AND VALUES
 
@@ -168,9 +200,13 @@ It is always preferable to name something `id` or `class`, by the nature of what
 
 Ids and class names should be all lowercase.
 
+
+
 #### SPECIFICITY
 
 To avoid CSS specificity issues, `id`s should be used sparingly, examples are: in-page bookmarks, anchors, form `label` tags, JavaScript's hooks, etc.
+
+
 
 ### IMAGES NEED `alt` ATTRIBUTES
 
@@ -178,19 +214,26 @@ The `img` tag requires alt text to both validate and meet accessibility guid
 
 If an image is purely decorative (it provides no content value other than visual flair to the page) then a `background-image` is appropriate. 
 
+
+
 ### USE TABLES FOR TABULAR DATA ONLY
 
 The `table` tag should only be used for the presentation of tabular data such as pricing or feature charts.
 
 The only exception is when composing HTML email, in which a table is almost the only thing supported by soul crushing email clients.
 
+
+
 ### INCLUDE EXTERNAL CSS INSIDE THE `head` TAG
 
 Style sheets can be placed anywhere but the HTML specification recommends that they be placed within the document `head` tag. The primary benefit is that pages will load faster.
 
+
+
 ### INCLUDING CSS AND JAVASCRIPT
 
 Per HTML 5 spec, typically there is no need to specify a `type` when including CSS and JavaScript files as `text/css` and `text/javascript` are their respective defaults.
+
 ```HTML
 <!-- External CSS file -->
 <link href="styles.css" rel="stylesheet">
@@ -204,6 +247,8 @@ Per HTML 5 spec, typically there is no need to specify a `type` when including
 <script src="app.js"></script>
 ```
 
+
+
 ### KEEP THE SYNTAX ORGANIZED
 
 When pages grow, managing HTML can be hard. There are some quick rules that can help us to keep our syntax clean and organized. These include the following:
@@ -213,6 +258,7 @@ When pages grow, managing HTML can be hard. There are some quick rules that can 
 - Omit the values on Boolean attributes
 
 For example:
+
 ```HTML
 <form action="/action_page.php" method="get">
     <fieldset>
@@ -231,11 +277,14 @@ For example:
 </form>
 ```
 
+
+
 ### REDUCE MARKUP
 
 Whenever possible, avoid superfluous parent elements when writing HTML: merging attributes and tags can help readability and improve the code.
 
 Many times this requires iteration and refactoring, but produces less HTML.
+
 ```HTML
 <!-- Don't do this -->
 <span class="avatar">
@@ -246,11 +295,14 @@ Many times this requires iteration and refactoring, but produces less HTML.
 <img src="images/dog.jpg" class="avatar">
 ```
 
+
+
 ### WHITESPACING AND FORMATTING
 
 #### INDENT TAGS THAT ARE VERY LONG
 
 For the sake or readability
+
 ```HTML
 <!-- Don't do this -->
 <input type="text" placeholder="Enter input" name="inputName"
@@ -270,7 +322,10 @@ For the sake or readability
 >
 ```
 
+
+
 #### ALWAYS USE DOUBLE QUOTES IN HTML FILES
+
 ```HTML
 <!-- Don't do this -->
 <input type='text' name='inputName' class='input-class'>
@@ -278,6 +333,8 @@ For the sake or readability
 <!-- Do this instead -->
 <input type="text" name="inputName" class="input-class">
 ```
+
+
 
 #### ATTRIBUTES ORDER
 
@@ -292,6 +349,7 @@ HTML attributes should come in this particular order for easier reading the code
 - `data-*`
 
 Examples:
+
 ```HTML
 <a href="/home" class="link" data-toggle="modal">
     Home page
