@@ -18,7 +18,8 @@
     - [Images need `alt` attributes](#images-need-alt-attributes)
     - [Use tables for tabular data only](#use-tables-for-tabular-data-only)
     - [Include external CSS inside the `<head>` tag](#include-external-css-inside-the-head-tag)
-    - [Including CSS and JavaScript](#including-css-and-javascript)
+    - [Avoid to specify the type of imported CSS and JavaScript files](#avoid-to-specify-the-type-of-imported-css-and-javascript-files)
+    - [Separate content from styles](#separate-content-from-styles)
     - [Keep the syntax organized](#keep-the-syntax-organized)
     - [Reduce markup](#reduce-markup)
     - [Whitespacing and formatting](#whitespacing-and-formatting)
@@ -230,7 +231,7 @@ Style sheets can be placed anywhere but the HTML specification recommends that t
 
 
 
-### INCLUDING CSS AND JAVASCRIPT
+### AVOID TO SPECIFY THE TYPE OF IMPORTED CSS AND JAVASCRIPT FILES
 
 Per HTML 5 spec, typically there is no need to specify a `type` when including CSS and JavaScript files as `text/css` and `text/javascript` are their respective defaults.
 
@@ -246,6 +247,12 @@ Per HTML 5 spec, typically there is no need to specify a `type` when including
 <!-- JavaScript script -->
 <script src="app.js"></script>
 ```
+
+
+
+### SEPARATE CONTENT FROM STYLE
+
+Avoid using inline styles within HTML. Doing so creates pages that take longer to load, are difficult to maintain, and cause headaches for designers and developers. [More on this here](./Styles/styles.md#never-use-inline-styles)
 
 
 
