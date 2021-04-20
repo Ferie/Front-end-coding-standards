@@ -26,7 +26,7 @@ _Note_: in this documents, sometimes I use "I" to refer specifically to what I u
         - [Use tables for tabular data only](./HTML/html.md#use-tables-for-tabular-data-only)
         - [Include external CSS inside the `<head>` tag](./HTML/html.md#include-external-css-inside-the-head-tag)
         - [Avoid to specify the type of imported CSS and JavaScript files](./HTML/html.md#avoid-to-specify-the-type-of-imported-css-and-javascript-files)
-        - [Separate content from styles](./HTML/html.md#separate-content-from-styles)
+        - [Separate content from styles](./HTML/html.md#separate-content-from-style)
         - [Keep the syntax organized](./HTML/html.md#keep-the-syntax-organized)
         - [Reduce markup](./HTML/html.md#reduce-markup)
         - [Whitespacing and formatting](./HTML/html.md#whitespacing-and-formatting)
