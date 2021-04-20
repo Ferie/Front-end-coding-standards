@@ -71,7 +71,11 @@
 
 ### NEVER USE INLINE STYLES
 
-When creating the markup, do not use inline styling because it would be very hard to override these styles in case you need to.
+When creating the markup, do not use inline styling because it would be very hard to override them when needed and any desired changes to styles have to be made in the HTML. Consequently, these styles cannot be reused, and the consistency of the styles will likely suffer.
+
+Instead of these styles we can use:
+- external style sheets,
+- classes to target elements that contain the styles.
 
 
 
@@ -84,8 +88,8 @@ CSS is built to allow styles to be reused, specifically with the use of classes.
 ### CLASS NAMES
 
 - Keep classes lowercase and use dashes or underscores as per [BEM](http://getbem.com/) methodology (do not use _camelCase_ nor _CapitalCase_).
-- Think about using [ABEM](https://css-tricks.com/abem-useful-adaptation-bem/) strategy, if necessary or if permitted.
-- Avoid excessive and arbitrary shorthand notation. `.btn` is useful for buttons, but `.b` doesn't mean anything.
+- Think about using the [ABEM](https://css-tricks.com/abem-useful-adaptation-bem/) strategy related to the modifiers (if necessary) to shorten the html.
+- Avoid excessive and arbitrary shorthand notation: `.btn` is useful for buttons, but `.b` doesn't mean anything.
 - Keep classes as short and succinct as possible.
 - Use meaningful names; use structural or purposeful names over presentational.
 - Prefix classes based on the closest block or parent or base class as per [BEM](http://getbem.com/) methodology.
@@ -110,7 +114,9 @@ Example:
 
 ### USE MULTIPLE STYLESHEETS, BUT BE AWARE OF THEM EXPANDING BEYOND CONTROL
 
-Depending on the complexity of the design and the size of the site, sometimes it’s easier to make smaller, multiple stylesheets instead of a giant one.
+Depending on the complexity of the design and the size of the website, sometimes it is easier to make smaller, multiple stylesheets (or partials in Sass/SCSS/Less) instead of a giant one. Having multiple files/partials, improve the maintainability developers can easily maintain 
+
+_Note_: if we are working with a JavaScript framework, this is really helpful because (usually) it can load only the styles that are needed for the components used in the current view, instead of loading one giant CSS file that contains styles that are used elsewhere in the website/application).
 
 
 
@@ -396,12 +402,22 @@ It appears that many generic mixins are just putting everything with the prefixe
 If you have to use them, insert them before the standard property.
 
 ```SCSS
-.selector { 
-    -webkit-transition: all 4s ease; /* Android, Chrome, iOS */
+.selector-1 {
+    -webkit-transition: all 4s ease; /* Android, Chrome, iOS, Edge */
     -moz-transition: all 4s ease; /* FireFox */
     -ms-transition: all 4s ease; /* Internet Explorer */
     -o-transition: all 4s ease; /* Opera */
     transition: all 4s ease; /* Modern browsers */
+}
+
+.selector-2 {
+    background-image: -webkit-linear-gradient(#a1d3b0, #f6f1d3);
+    background-image: -moz-linear-gradient(#a1d3b0, #f6f1d3);
+    background-image: -ms-linear-gradient(#a1d3b0, #f6f1d3);
+    background-image: -o-linear-gradient(#a1d3b0, #f6f1d3);
+    background-image: linear-gradient(#a1d3b0, #f6f1d3);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#a1d3b0', endColorStr='#f6f1d3', GradientType=0)"; /* linear gradient for IE8+ */
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#a1d3b0', endColorStr='#f6f1d3', GradientType=0); /* linear gradient for IE7- */
 }
 ```
 
