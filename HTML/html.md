@@ -19,7 +19,7 @@
     - [Use tables for tabular data only](#use-tables-for-tabular-data-only)
     - [Include external CSS inside the `<head>` tag](#include-external-css-inside-the-head-tag)
     - [Avoid to specify the type of imported CSS and JavaScript files](#avoid-to-specify-the-type-of-imported-css-and-javascript-files)
-    - [Separate content from styles](#separate-content-from-styles)
+    - [Separate content from style](#separate-content-from-style)
     - [Keep the syntax organized](#keep-the-syntax-organized)
     - [Reduce markup](#reduce-markup)
     - [Whitespacing and formatting](#whitespacing-and-formatting)
