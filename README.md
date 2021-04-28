@@ -17,7 +17,7 @@ _Note_: in this documents, sometimes I use "I" to refer specifically to what I u
         - [Meta Descriptions](./HTML/html.md#meta-descriptions)
         - [Viewport](./HTML/html.md#viewport)
         - [Use semantic HTML 5 tags](./HTML/html.md#use-semantic-html-5-tags)
-        - [Close your tags](./HTML/html.md#close-tags)
+        - [Close the tags](./HTML/html.md#close-the-tags)
         - [Use lowercase in your tags](./HTML/html.md#use-lowercase)
         - [Character encoding](./HTML/html.md#character-encoding)
         - [Use conditional comments](./HTML/html.md#use-conditional-comments)
