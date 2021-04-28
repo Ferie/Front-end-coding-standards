@@ -10,7 +10,7 @@
     - [Meta Descriptions](#meta-descriptions)
     - [Viewport](#viewport)
     - [Use semantic HTML 5 tags](#use-semantic-html-5-tags)
-    - [Close your tags](#close-tags)
+    - [Close the tags](#close-the-tags)
     - [Use lowercase in your tags](#use-lowercase)
     - [Character encoding](#character-encoding)
     - [Use conditional comments](#use-conditional-comments)
@@ -136,7 +136,7 @@ To improve the experience of users that are using readers and other tools to rea
 
 
 
-### CLOSE TAGS
+### CLOSE THE TAGS
 
 Leaving some tags open is simply a bad practice.
 
@@ -352,6 +352,7 @@ HTML attributes should come in this particular order for easier reading the code
 - `id`
 - `placeholder`
 - `title`, `alt`, `value`
+- `checked`, `disabled`
 - `role`, `aria-*`
 - `data-*`
 
