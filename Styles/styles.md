@@ -427,8 +427,6 @@ If you have to use them, insert them before the standard property.
 
 For the sake of readability, I structure all the properties in alphabetical order with the exception of the ones that are ruling the position of the element (`float`, `position`, `top`, `left`, `right`, `bottom`) and the visibility (`display`) at the top of the declaration.
 
-I also put the ones that are ruling the dimensions (`max-height`, `max-width`, `height` and `width`) at the bottom where `width` rule should be (considering alphabetical order).
-
 Example:
 
 ```SCSS
@@ -441,14 +439,14 @@ Example:
     display: block;
     background-color: #ff0000;
     border: 1px solid #00ff00;
-    color: #0000ff;
-    font-size: 1rem;
-    line-height: 1;
+    color: #0103fe;
+    font-size: 1.2rem;
+    height: auto;
+    line-height: 1.4;
     margin: 0 auto;
     padding: .5rem 1rem;
     max-width: 10rem;
-    height: auto;
-    z-index: 10;
+    z-index: 1;
 }
 ```
 
