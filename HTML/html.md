@@ -24,8 +24,8 @@
     - [Reduce markup](#reduce-markup)
     - [Whitespacing and formatting](#whitespacing-and-formatting)
         - [Indent tags that are very long](#indent-tags-that-are-very-long)
-        - [Always use double quotes in HTML files](#always-use-double-quotes-in-html-files)
         - [Attributes order](#attributes-order)
+        - [Always use double quotes in HTML files](#always-use-double-quotes-in-html-files)
 - [Styles (CSS/SCSS)](../Styles/styles.md#styles-cssscss)
 - [JavaScript/TypeScript](../Scripts/javascript.md#javascripttypescript)
 - [General best practices](../Generals/generals.md#general-best-practices)
@@ -331,18 +331,6 @@ For the sake or readability
 
 
 
-#### ALWAYS USE DOUBLE QUOTES IN HTML FILES
-
-```HTML
-<!-- Don't do this -->
-<input type='text' name='inputName' class='input-class'>
-
-<!-- Do this instead -->
-<input type="text" name="inputName" class="input-class">
-```
-
-
-
 #### ATTRIBUTES ORDER
 
 HTML attributes should come in this particular order for easier reading the code:
@@ -369,3 +357,15 @@ Examples:
 ```
 
 As far as Identifiable information is concerned, classes make for great reusable components, so they come before `id`s.
+
+
+
+#### ALWAYS USE DOUBLE QUOTES IN HTML FILES
+
+```HTML
+<!-- Don't do this -->
+<input type='text' name='inputName' class='input-class'>
+
+<!-- Do this instead -->
+<input type="text" name="inputName" class="input-class">
+```
